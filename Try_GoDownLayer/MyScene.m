@@ -19,27 +19,25 @@ float DOWNSPEED = 12;
 int star_type = 0;
 int star_specail_type = 1;
 
-@implementation MyScene{
+@implementation MyScene {
     bool isGameRun;
-    NSMutableArray * floorsTexture;
-    NSMutableArray * enemyTexture;
-    NSMutableArray * enemyArray;
-    NSArray * rightNsArray;
-    NSArray * leftNsArray;
-    SKTexture * injureHamster;
-    NSArray * starsTexture;
-    NSMutableArray * starsArray;
-    SKLabelNode* starNumLabel;
-    SKLabelNode* layerNumLabel;
-    MyADView * myAdView;
-    SKSpriteNode * rankBtn;
+    NSMutableArray *floorsTexture;
+    NSMutableArray *enemyTexture;
+    NSMutableArray *enemyArray;
+    NSArray *rightNsArray;
+    NSArray *leftNsArray;
+    SKTexture *injureHamster;
+    NSArray *starsTexture;
+    NSMutableArray *starsArray;
+    SKLabelNode *starNumLabel;
+    SKLabelNode *layerNumLabel;
+    MyADView *myAdView;
+    SKSpriteNode *rankBtn;
 
-//    SKSpriteNode * player;
-//    NSMutableArray * floorArray;
-    Player* player;
+    Player *player;
     SKAction *moveAnimation;
     bool isStandOnFootboard;
-    NSMutableArray * floorsByLines;
+    NSMutableArray *floorsByLines;
     CGPoint originalPoint;
     bool isFromLeft;
     bool isJumping;
@@ -50,15 +48,12 @@ int star_specail_type = 1;
     int layerIndex;
 }
 
--(id)initWithSize:(CGSize)size {    
+- (id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
         isGameRun = YES;
         isFromLeft = YES;
         floorSpeed = FOOTBOARD_SPEED;
         
-//        floorArray = [NSMutableArray array];
-//        fireballs = [NSMutableArray array];
         floorsTexture = [NSMutableArray array];
         floorsByLines = [NSMutableArray array];
         enemyArray = [NSMutableArray array];
@@ -93,8 +88,6 @@ int star_specail_type = 1;
         moveAnimation = [SKAction repeatActionForever:[SKAction animateWithTextures:@[sheep1,sheep2,sheep3] timePerFrame:0.1]];
         [player runAction:moveAnimation];
         
-//        player.stop
-        
         [self addChild:player];
         
         starNumLabel = [SKLabelNode labelNodeWithText:[NSString stringWithFormat:@"%d", starNum]];
@@ -113,9 +106,8 @@ int star_specail_type = 1;
         
         myAdView = [MyADView spriteNodeWithTexture:nil];
         myAdView.name = @"adView";
-        myAdView.size = CGSizeMake(self.frame.size.width, self.frame.size.width/5.0f);
-        //        myAdView.position = CGPointMake(self.frame.size.width/2, self.frame.size.height - 35);
-        myAdView.position = CGPointMake(self.frame.size.width/2, 0);
+        myAdView.size = CGSizeMake(self.frame.size.width, self.frame.size.width / 5.0f);
+        myAdView.position = CGPointMake(self.frame.size.width / 2, 0);
         [myAdView startAd];
         myAdView.zPosition = 1;
         myAdView.anchorPoint = CGPointMake(0.5, 0);
@@ -124,23 +116,23 @@ int star_specail_type = 1;
         rankBtn = [SKSpriteNode spriteNodeWithImageNamed:@"btnL_GameCenter-hd"];
         rankBtn.name = @"rankBtn";
         rankBtn.size = CGSizeMake(50,50);
-        //        rankBtn.anchorPoint = CGPointMake(0, 0);
-        rankBtn.position = CGPointMake(rankBtn.size.width/2.0f, self.frame.size.height - 200);
+
+        rankBtn.position = CGPointMake(rankBtn.size.width / 2.0f, self.frame.size.height - 200);
         rankBtn.zPosition = 1;
         [self addChild:rankBtn];
     }
     return self;
 }
 
--(void)didFinishUpdate{
+- (void)didFinishUpdate {
 
 }
 
--(void)didApplyConstraints{
+- (void)didApplyConstraints {
     
 }
 
--(void)didEvaluateActions{
+- (void)didEvaluateActions {
     //    CGPoint cameraPositionInScene = [player.scene convertPoint:player.position fromNode:player.parent];
     //    cameraPositionInScene.x = 0;
     //    player.parent.position = CGPointMake(player.parent.position.x - cameraPositionInScene.x, player.parent.position.y - cameraPositionInScene.y);
@@ -164,15 +156,15 @@ int star_specail_type = 1;
     player.position = originalPoint;
 }
 
--(void)didSimulatePhysics{
+- (void)didSimulatePhysics {
 
 }
 
--(void)showScore{
+- (void)showScore {
     
 }
 
--(void)initImage{
+- (void)initImage {
     [floorsTexture addObject:[SKTexture textureWithImageNamed:@"bubble_1"]];
     [floorsTexture addObject:[SKTexture textureWithImageNamed:@"bubble_2"]];
     [floorsTexture addObject:[SKTexture textureWithImageNamed:@"red_point"]];
@@ -182,11 +174,11 @@ int star_specail_type = 1;
     [self initStar];
 }
 
--(void)initEnemyTexture{
+- (void)initEnemyTexture {
 //    [enemyTexture addObject:<#(id)#>];
 }
 
--(void)initTextures{
+- (void)initTextures {
     injureHamster = [SKTexture textureWithImageNamed:@"hamster_injure"];
     
     rightNsArray = [TextureHelper getTexturesWithSpriteSheetNamed:@"hamster" withinNode:nil sourceRect:CGRectMake(0, 0, 192, 200) andRowNumberOfSprites:2 andColNumberOfSprites:7
@@ -198,11 +190,11 @@ int star_specail_type = 1;
                                                         sequence:@[@4,@5,@4]];
 }
 
--(void)initStar{
+- (void)initStar {
     starsTexture = [NSArray arrayWithObjects:[SKTexture textureWithImageNamed:@"Star"], [SKTexture textureWithImageNamed:@"StarSpecial"], nil];
 }
 
--(void)createStar{
+- (void)createStar {
     SKSpriteNode* star;
     int starType = arc4random_uniform(20);
     if (starType==0) {
@@ -232,7 +224,7 @@ int star_specail_type = 1;
     }
 }
 
--(void)moveStar{
+- (void)moveStar {
     
     for(int i = 0; i < starsArray.count; i++){
         SKSpriteNode *star = starsArray[i];
@@ -248,7 +240,7 @@ int star_specail_type = 1;
     }
 }
 
--(void)checkAndEatStar{
+- (void)checkAndEatStar {
     
     for(int i = 0; i < starsArray.count; i++){
         SKSpriteNode *star = starsArray[i];
@@ -263,7 +255,7 @@ int star_specail_type = 1;
     starNumLabel.text = [NSString stringWithFormat:@"%d", starNum];
 }
 
--(void)checkAndRemoveEnemy{
+- (void)checkAndRemoveEnemy {
     for(int i = 0; i < enemyArray.count; i++){
         SKSpriteNode *enemy = enemyArray[i];
         if(enemy.position.x < 0 || enemy.position.x > self.frame.size.width){
@@ -273,7 +265,7 @@ int star_specail_type = 1;
     }
 }
 
--(void)createEnemy{
+- (void)createEnemy {
     int min = 2;
     int max = floorsByLines.count -1;
     int randomRow = arc4random_uniform(max-min+1)+min;
@@ -326,7 +318,7 @@ int star_specail_type = 1;
     [enemyArray addObject:enemy];
 }
 
--(void)breakFloor{
+- (void)breakFloor {
     SKAction * jumpUp = [SKAction moveByX:0 y:10 duration:0.5];
     
     
@@ -382,7 +374,7 @@ int star_specail_type = 1;
 //    [self checkPlayerDown];
 }
 
--(void)checkPlayerDown{
+- (void)checkPlayerDown {
     
 //    {
 //        self.lastSpawnTimeInterval = 0;
@@ -518,16 +510,16 @@ int star_specail_type = 1;
 //    [sefl breakFloor];
 }
 
--(void)eatTool{
+- (void)eatTool {
     
 }
 
--(void)showCurrentLayer{
+- (void)showCurrentLayer {
     
 }
 
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
     for (UITouch *touch in touches) {
@@ -557,11 +549,11 @@ int star_specail_type = 1;
     
 }
 
--(void)initFloorPool{
+- (void)initFloorPool {
     
 }
 
--(void)createFloorAfterCheck:(NSMutableArray*) floorsInLine positionY:(float)y{
+- (void)createFloorAfterCheck:(NSMutableArray*) floorsInLine positionY:(float)y {
     
     bool isNeedCreate = true;
     MoveableFloor* floor;
@@ -582,20 +574,20 @@ int star_specail_type = 1;
     }
 }
 
--(void)createFloor:(NSMutableArray*) floorsInLine positionY:(float)y{
+- (void)createFloor:(NSMutableArray*) floorsInLine positionY:(float)y {
     [self createFloor:floorsInLine positionX:0 positionY:y isAutoDeterminePositonX:true];
 }
 
--(void)createFloorWitchIsFirstFloor:(NSMutableArray*) floorsInLine positionY:(float)y{
+- (void)createFloorWitchIsFirstFloor:(NSMutableArray*) floorsInLine positionY:(float)y {
     [self createFloor:floorsInLine positionX:0 positionY:y
     isAutoDeterminePositonX:false isAutoDeterminePositonXInFirst:true];
 }
 
--(void)createFloor:(NSMutableArray*) floorsInLine positionX:(float)x positionY:(float)y isAutoDeterminePositonX:(BOOL)isAutoDeterminePositonX{
+- (void)createFloor:(NSMutableArray*) floorsInLine positionX:(float)x positionY:(float)y isAutoDeterminePositonX:(BOOL)isAutoDeterminePositonX {
     [self createFloor:floorsInLine positionX:x positionY:y isAutoDeterminePositonX:isAutoDeterminePositonX isAutoDeterminePositonXInFirst:false];
 }
 
--(void)createFloor:(NSMutableArray*) floorsInLine positionX:(float)x positionY:(float)y isAutoDeterminePositonX:(BOOL)isAutoDeterminePositonX isAutoDeterminePositonXInFirst:(BOOL)isAutoDeterminePositonXInFirst{
+- (void)createFloor:(NSMutableArray*) floorsInLine positionX:(float)x positionY:(float)y isAutoDeterminePositonX:(BOOL)isAutoDeterminePositonX isAutoDeterminePositonXInFirst:(BOOL)isAutoDeterminePositonXInFirst {
     
     int r = arc4random_uniform(4);
     
@@ -632,8 +624,8 @@ int star_specail_type = 1;
     
 }
 
--(void)moveFloor{
-    for(int i = 0; i < floorsByLines.count; i++){
+- (void)moveFloor {
+    for (int i = 0; i < floorsByLines.count; i++) {
         NSMutableArray* floorArray = floorsByLines[i];
         for (int j = 0; j < floorArray.count; j++) {
             MoveableFloor* floor = floorArray[j];
@@ -642,13 +634,13 @@ int star_specail_type = 1;
     }
 }
 
--(void)removeFloor{
+- (void)removeFloor {
     NSMutableArray* removeFloors = [NSMutableArray array];
     for(int i = 0; i < floorsByLines.count; i++){
         NSMutableArray* floorArray = floorsByLines[i];
         for (int j = 0; j < floorArray.count; j++) {
             MoveableFloor* floor = floorArray[j];
-            if([floor isNeedRemoveInstance]){
+            if ([floor isNeedRemoveInstance]) {
                 [floor removeFromParent];
                 [removeFloors addObject:floor];
             }
@@ -665,7 +657,7 @@ int star_specail_type = 1;
     [self deleteFloorsInLines];
 }
 
--(void)checkPlayerIsOnFloor{
+- (void)checkPlayerIsOnFloor {
     isStandOnFootboard = false;
     MoveableFloor* standedFootboard = nil;
     
@@ -713,14 +705,14 @@ int star_specail_type = 1;
     }
 }
 
--(void)checkLayerNum:(SKSpriteNode*) standedFootboard{
+- (void)checkLayerNum:(SKSpriteNode*) standedFootboard {
 //    layerNum = standedFootboard.name.intValue - 4;
 //    layerNumLabel.text = [NSString stringWithFormat:@"%d", layerNum];
     layerNumLabel.text = standedFootboard.name;
     NSLog(@"%@",standedFootboard.name);
 }
 
--(void)checkEnemyDown{
+- (void)checkEnemyDown {
     for(SKSpriteNode *enemy in enemyArray){
         bool isStandOnFootboard = false;
         MoveableFloor* standedFootboard = nil;
@@ -766,14 +758,14 @@ int star_specail_type = 1;
     }
 }
 
--(void)checkPlayerHitEnemy{
+- (void)checkPlayerHitEnemy {
     for (int i = 0; i < enemyArray.count; i++) {
         SKSpriteNode * enemy = enemyArray[i];
         
-        if(CGRectIntersectsRect(player.calculateAccumulatedFrame, enemy.calculateAccumulatedFrame)){
-            if(isStandOnFootboard){
+        if (CGRectIntersectsRect(player.calculateAccumulatedFrame, enemy.calculateAccumulatedFrame)) {
+            if (isStandOnFootboard) {
                 //gameover
-            }else{
+            } else {
                 isJumping = true;
                 if(player.position.x >= enemy.position.x){
                     isFromLeft = NO;
@@ -805,7 +797,7 @@ int star_specail_type = 1;
                     [player removeAllActions];
 //                    [player runAction:[SKAction group:@[[SKAction sequence:@[upAction, upEnd, downAction, end]], horzAction]]];
                     [player runAction:[SKAction sequence:@[upAction, upEnd, end]]];
-                }else{
+                } else {
                     isFromLeft = YES;
                     floorSpeed = FOOTBOARD_SPEED;
                     
@@ -836,7 +828,7 @@ int star_specail_type = 1;
                 [enemy removeFromParent];
                 [enemyArray removeObject:enemy];
                 
-                for(NSMutableArray* oneLine in floorsByLines){
+                for (NSMutableArray* oneLine in floorsByLines) {
                     MoveableFloor* floor;
                     if(isFromLeft){
                         floor = [oneLine lastObject];
@@ -851,7 +843,7 @@ int star_specail_type = 1;
     }
 }
 
--(void)checkDodgeEnemy{
+- (void)checkDodgeEnemy {
     for (int i = 0; i < enemyArray.count; i++) {
         SKSpriteNode * enemy = enemyArray[i];
         
@@ -861,7 +853,7 @@ int star_specail_type = 1;
     }
 }
 
--(void)deleteFloorsInLines{
+- (void)deleteFloorsInLines {
     NSMutableArray * firstLine = [floorsByLines firstObject];
     MoveableFloor* floor = [firstLine firstObject];
     if(floor.position.y >= self.frame.size.height + floor.size.height){
@@ -873,7 +865,7 @@ int star_specail_type = 1;
     }
 }
 
--(void)createFoorsInLines{
+- (void)createFoorsInLines {
     NSMutableArray * footbardsLine;
     footbardsLine = [NSMutableArray array];
     
@@ -963,7 +955,7 @@ int star_specail_type = 1;
 }
 
 
--(void)update:(CFTimeInterval)currentTime {
+- (void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     if(!isGameRun){
         [self setViewRun:false];
@@ -1026,7 +1018,7 @@ int star_specail_type = 1;
     }
 }
 
--(void)setViewRun:(bool)isrun{
+- (void)setViewRun:(bool)isrun {
     isGameRun = isrun;
     
     for (int i = 0; i < [self children].count; i++) {
@@ -1035,8 +1027,8 @@ int star_specail_type = 1;
     }
 }
 
--(void)reportScore{
-    GameCenterUtil * gameCenterUtil = [GameCenterUtil sharedInstance];
+- (void)reportScore {
+    GameCenterUtil *gameCenterUtil = [GameCenterUtil sharedInstance];
     [gameCenterUtil reportScore:layerNum forCategory:@"com.irons.InfiniteSlotMoney"];
 }
 

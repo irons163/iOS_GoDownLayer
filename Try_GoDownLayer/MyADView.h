@@ -10,39 +10,14 @@
 
 @interface MyADView : SKSpriteNode
 
-+(MyADView *) createMyADView;
++ (MyADView *)createMyADView;
 
--(void)startAd;
+- (void)startAd;
 
--(void)changeAd;
+- (void)changeAd;
 
--(void)doClick;
+- (void)doClick;
 
--(void)close;
-
-@end
-
-/*
-@interface MyAdView : NSObject {
-    SKSpriteNode *node;
-}
+- (void)close;
 
 @end
-
-@implementation MyADView
-
-- (id)init {
-    node = [SKSpriteNode new];
-    /// edit default
-}
-
-- (void)doSomething {
-    
-}
-
-- (void)runAction {
-    [node runAction];
-}
-
-@end
-*/

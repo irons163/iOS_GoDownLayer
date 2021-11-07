@@ -10,13 +10,14 @@
 
 @interface MoveableFloor : SKSpriteNode
 
-+(instancetype)floorWithImageNamed:(NSString *)name withRangeWidth:(float)rangeWidth;
-+(instancetype)floorWithTexture:(SKTexture*)texture withRangeWidth:(float)rangeWidth;
--(BOOL)isNeedCreateNewInstance;
--(void)move:(float) speedX;
--(BOOL)isNeedRemoveInstance;
--(void)setIsCarStartFromLeft:(BOOL)isCarStartFromLeft;
--(void)setPositionYAndAutoDeterminePositionX:(float)y;
--(void)setPositionYAndAutoPositionXForFirstFloorInLine:(float)y;
--(void)setInstanceCreatePositionX:(float)instanceCreatePositionX;
++ (instancetype)floorWithImageNamed:(NSString *)name withRangeWidth:(float)rangeWidth;
++ (instancetype)floorWithTexture:(SKTexture *)texture withRangeWidth:(float)rangeWidth;
+- (BOOL)isNeedCreateNewInstance;
+- (void)move:(float)speedX;
+- (BOOL)isNeedRemoveInstance;
+- (void)setIsCarStartFromLeft:(BOOL)isCarStartFromLeft;
+- (void)setPositionYAndAutoDeterminePositionX:(float)y;
+- (void)setPositionYAndAutoPositionXForFirstFloorInLine:(float)y;
+- (void)setInstanceCreatePositionX:(float)instanceCreatePositionX;
+
 @end
