@@ -25,15 +25,19 @@
     }
     
     ads = [NSArray arrayWithObjects:[SKTexture textureWithImageNamed:@"ad1.jpg"],
-           [SKTexture textureWithImageNamed:NSLocalizedString(@"cat_shoot_ad", "")],
-           [SKTexture textureWithImageNamed:@"2048_ad"],
            [SKTexture textureWithImageNamed:@"Shoot_Learning_ad"],
            [SKTexture textureWithImageNamed:@"cute_dudge_ad"],
            [SKTexture textureWithImageNamed:catAdImageName],
            [SKTexture textureWithImageNamed:@"crazy_split_ad"],
            [SKTexture textureWithImageNamed:@"HappyDownStages_AD"],nil];
     
-    adsUrl = [NSArray arrayWithObjects:@"http://itunes.apple.com/us/app/good-sleeper-counting-sheep/id998186214?l=zh&ls=1&mt=8", @"http://itunes.apple.com/us/app/attack-on-giant-cat/id1000152033?l=zh&ls=1&mt=8", @"https://itunes.apple.com/us/app/2048-chinese-zodiac/id1024333772?l=zh&ls=1&mt=8",@"https://itunes.apple.com/us/app/shoot-learning-math/id1025414483?l=zh&ls=1&mt=8",@"https://itunes.apple.com/us/app/cute-dodge/id1018590182?l=zh&ls=1&mt=8",@"https://itunes.apple.com/us/app/unlimited-cat-world/id1000573724?l=zh&ls=1&mt=8",@"https://itunes.apple.com/us/app/crazy-split/id1038958249?l=zh&ls=1&mt=8",@"https://itunes.apple.com/us/app/adventure-happy-down-stages/id1035092790?l=zh&ls=1&mt=8", nil];
+    adsUrl = [NSArray arrayWithObjects:@"http://itunes.apple.com/us/app/good-sleeper-counting-sheep/id998186214?l=zh&ls=1&mt=8",
+              @"https://itunes.apple.com/us/app/shoot-learning-math/id1025414483?l=zh&ls=1&mt=8",
+              @"https://itunes.apple.com/us/app/cute-dodge/id1018590182?l=zh&ls=1&mt=8",
+              @"https://itunes.apple.com/us/app/unlimited-cat-world/id1000573724?l=zh&ls=1&mt=8",
+              @"https://itunes.apple.com/us/app/crazy-split/id1038958249?l=zh&ls=1&mt=8",
+              @"https://itunes.apple.com/us/app/adventure-happy-down-stages/id1035092790?l=zh&ls=1&mt=8",
+              nil];
     
     adIndex = 0;
     self.texture = ads[adIndex];
@@ -52,7 +56,7 @@
     [self addChild:button];
 }
 
--(void)changeAd{
+- (void)changeAd {
     
     adIndex++;
     if(adIndex < ads.count){

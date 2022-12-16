@@ -43,6 +43,7 @@
 		B592A8B51AF990210014FC4C /* Try_GoDownLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B592A8B41AF990210014FC4C /* Try_GoDownLayerTests.m */; };
 		B592A8C01AF9EC7A0014FC4C /* MySpark.sks in Resources */ = {isa = PBXBuildFile; fileRef = B592A8BE1AF9EC7A0014FC4C /* MySpark.sks */; };
 		B592A8C11AF9EC7A0014FC4C /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = B592A8BF1AF9EC7A0014FC4C /* spark.png */; };
+		B5B104C72759F7C500821584 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B104C62759F7C500821584 /* Enemy.m */; };
 		B5E178AF1C353AD20000C2C5 /* TextureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E178AE1C353AD20000C2C5 /* TextureHelper.m */; };
 		B5E178B41C354B700000C2C5 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E178B01C354B700000C2C5 /* Star.png */; };
 		B5E178B51C354B700000C2C5 /* Star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E178B11C354B700000C2C5 /* Star@2x.png */; };
@@ -122,6 +123,8 @@
 		B592A8B41AF990210014FC4C /* Try_GoDownLayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Try_GoDownLayerTests.m; sourceTree = "<group>"; };
 		B592A8BE1AF9EC7A0014FC4C /* MySpark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MySpark.sks; sourceTree = "<group>"; };
 		B592A8BF1AF9EC7A0014FC4C /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		B5B104C52759F7C500821584 /* Enemy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		B5B104C62759F7C500821584 /* Enemy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 		B5E178AD1C353AD20000C2C5 /* TextureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureHelper.h; sourceTree = "<group>"; };
 		B5E178AE1C353AD20000C2C5 /* TextureHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureHelper.m; sourceTree = "<group>"; };
 		B5E178B01C354B700000C2C5 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 				B546567B1BA982BD00CA7FBA /* MoveableFloor.m */,
 				B54656861BAA396700CA7FBA /* Player.h */,
 				B54656871BAA396700CA7FBA /* Player.m */,
+				B5B104C52759F7C500821584 /* Enemy.h */,
+				B5B104C62759F7C500821584 /* Enemy.m */,
 				B5E178AD1C353AD20000C2C5 /* TextureHelper.h */,
 				B5E178AE1C353AD20000C2C5 /* TextureHelper.m */,
 				B5E178B81C3CA2DF0000C2C5 /* MyADView.h */,
@@ -449,6 +454,7 @@
 				B5E178BA1C3CA2DF0000C2C5 /* MyADView.m in Sources */,
 				B592A8951AF990210014FC4C /* AppDelegate.m in Sources */,
 				B5E178DB1C3CA5A80000C2C5 /* GameCenterUtil.m in Sources */,
+				B5B104C72759F7C500821584 /* Enemy.m in Sources */,
 				B592A8911AF990210014FC4C /* main.m in Sources */,
 				B54656881BAA396700CA7FBA /* Player.m in Sources */,
 				B546567C1BA982BD00CA7FBA /* MoveableFloor.m in Sources */,

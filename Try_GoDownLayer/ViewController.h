@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@import iAd;
+//@import iAd;
 
-@interface ViewController : UIViewController<ADBannerViewDelegate>
+@interface ViewController : UIViewController
 
 @end

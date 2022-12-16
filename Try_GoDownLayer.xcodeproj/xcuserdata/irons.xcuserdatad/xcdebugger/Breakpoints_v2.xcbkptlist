@@ -5,23 +5,6 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "11412649-8234-476D-A82C-51BF7AB04D4E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768786.566228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "664"
-            endingLineNumber = "664"
-            landmarkName = "-checkPlayerIsOnFloor"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
             uuid = "0EF5C294-D47B-482E-95DE-04E92C861895"
@@ -43,26 +26,9 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "896"
-            endingLineNumber = "896"
+            startingLineNumber = "595"
+            endingLineNumber = "595"
             landmarkName = "-createFoorsInLines"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "702BD5D8-0503-4858-B488-CCB89148D48F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768786.566228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "334"
-            endingLineNumber = "334"
-            landmarkName = "-breakFloor"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -86,40 +52,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "429FF337-E6A2-422F-9086-B314DFF8DFA7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768786.566228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "874"
-            endingLineNumber = "874"
-            landmarkName = "-createFoorsInLines"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "12B90AE5-38ED-49E8-AABC-B5764DADE088"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768786.566228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "883"
-            endingLineNumber = "883"
-            landmarkName = "-createFoorsInLines"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BEA8C050-5B13-4E63-A58F-F448B2B59906"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -128,8 +60,8 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "770"
-            endingLineNumber = "770"
+            startingLineNumber = "501"
+            endingLineNumber = "501"
             landmarkName = "-checkPlayerHitEnemy"
             landmarkType = "7">
          </BreakpointContent>
@@ -145,26 +77,9 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "902"
-            endingLineNumber = "902"
+            startingLineNumber = "601"
+            endingLineNumber = "601"
             landmarkName = "-createFoorsInLines"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "505314CE-B57B-49EC-9021-AB6196A98876"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768786.566228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "624"
-            endingLineNumber = "624"
-            landmarkName = "-createFloor:positionX:positionY:isAutoDeterminePositonX:isAutoDeterminePositonXInFirst:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -179,26 +94,9 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "922"
-            endingLineNumber = "922"
+            startingLineNumber = "621"
+            endingLineNumber = "621"
             landmarkName = "-createFoorsInLines"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "01C990C5-C022-47AC-B4B1-8EC7EE14FCBF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768786.566228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "572"
-            endingLineNumber = "572"
-            landmarkName = "-createFloorAfterCheck:positionY:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -213,8 +111,8 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "-createStar"
             landmarkType = "7">
          </BreakpointContent>
@@ -230,8 +128,8 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "-createStar"
             landmarkType = "7">
          </BreakpointContent>
@@ -239,85 +137,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E38B6AD9-291C-4C0F-9B1A-EABFD14957B0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768786.566228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "-didEvaluateActions"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7BA7D44E-BA7A-46D0-98B2-BC9F2C718C4B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768786.566228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "-didEvaluateActions"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E45A8BFB-55DC-4098-91DD-DF0E02E08B0E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768786.566228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "711"
-            endingLineNumber = "711"
-            landmarkName = "-checkLayerNum:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4E665AD3-516B-4B41-A36C-D1F7939F24F6"
+            uuid = "3022D5E5-55B3-4766-BA2A-E36A62D29175"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "615"
-            endingLineNumber = "615"
-            landmarkName = "-createFloor:positionX:positionY:isAutoDeterminePositonX:isAutoDeterminePositonXInFirst:"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "-initWithSize:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "11CD6690-C6AE-4DFE-89D4-CA0961AE3E47"
+            uuid = "BCB8BDAA-F288-46A7-8C7E-FCA5931A31AF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Try_GoDownLayer/MyScene.m"
-            timestampString = "473768906.443954"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "538"
-            endingLineNumber = "538"
-            landmarkName = "-touchesBegan:withEvent:"
+            startingLineNumber = "521"
+            endingLineNumber = "521"
+            landmarkName = "-checkPlayerHitEnemy"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

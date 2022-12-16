@@ -64,12 +64,12 @@ static int CAR_DISTANCE = 100;
 }
 
 - (void)setPositionYAndAutoDeterminePositionX:(float)y {
-    [self setInstanceCreatePositionX:isCarStartFromLeft ? -10 : rangeWidth+10];
+    [self setInstanceCreatePositionX:isCarStartFromLeft ? -10 : rangeWidth + 10];
     self.position = CGPointMake(instanceCreatePositionX, y);
 }
 
 - (void)setPositionYAndAutoPositionXForFirstFloorInLine:(float)y {
-    [self setInstanceCreatePositionX:isCarStartFromLeft ? -10 : rangeWidth+50];
+    [self setInstanceCreatePositionX:isCarStartFromLeft ? -10 : rangeWidth + 50];
     self.position = CGPointMake(isCarStartFromLeft?rangeWidth+self.size.width * 4 + 10 : -10 - self.size.width / 2 - 5, y);
 }
 

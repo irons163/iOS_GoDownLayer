@@ -11,7 +11,7 @@
 
 static GameCenterUtil* instance;
 
-@implementation GameCenterUtil{
+@implementation GameCenterUtil {
     BOOL gameCenterAvailable;
 }
 
@@ -99,7 +99,7 @@ static GameCenterUtil* instance;
     }
 }
 
-- (void)reportScore: (int64_t)score forCategory: (NSString*) category {
+- (void)reportScore:(int64_t)score forCategory:(NSString *)category {
     GKScore *scoreReporter = [[GKScore alloc] initWithCategory:category];
     
     scoreReporter.value = score;
@@ -113,7 +113,7 @@ static GameCenterUtil* instance;
     }];
 }
 
-- (void)storeScoreForLater:(NSData *)scoreData{
+- (void)storeScoreForLater:(NSData *)scoreData {
     NSMutableArray *savedScoresArray = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"savedScores"]];
     
     [savedScoresArray addObject:scoreData];
@@ -125,7 +125,7 @@ static GameCenterUtil* instance;
     
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"savedScores"];
     
-    for(NSData *scoreData in savedScoreArray){
+    for (NSData *scoreData in savedScoreArray) {
         GKScore *scoreReporter = [NSKeyedUnarchiver unarchiveObjectWithData:scoreData];
         
         [scoreReporter reportScoreWithCompletionHandler:^(NSError *error) {
@@ -153,7 +153,7 @@ static GameCenterUtil* instance;
     }
 }
 
-- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController{
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
     [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
