@@ -74,7 +74,7 @@ int star_specail_type = 1;
         player = [Player spriteNodeWithImageNamed:@"sheep1"];
         
         player.size = CGSizeMake(50, 50);
-        player.position = CGPointMake(100, 200);
+        player.position = CGPointMake(160, 200);
         originalPoint = player.position;
         player.anchorPoint = CGPointMake(0.5, 0);
         
@@ -120,19 +120,7 @@ int star_specail_type = 1;
     return self;
 }
 
-- (void)didFinishUpdate {
-    
-}
-
-- (void)didApplyConstraints {
-    
-}
-
 - (void)didEvaluateActions {
-    //    CGPoint cameraPositionInScene = [player.scene convertPoint:player.position fromNode:player.parent];
-    //    cameraPositionInScene.x = 0;
-    //    player.parent.position = CGPointMake(player.parent.position.x - cameraPositionInScene.x, player.parent.position.y - cameraPositionInScene.y);
-    
     float dx = player.position.x - originalPoint.x;
     float dy = player.position.y - originalPoint.y;
     
@@ -141,23 +129,11 @@ int star_specail_type = 1;
             
         }
         SKNode * n = [self children][i];
-        if ([n.name isEqualToString:@"star"]) {
-            //            NSLog(@"star");
-        }
-        
         if([n.name isEqualToString:@"starNumLabel"] || [n.name isEqualToString:@"layerNumLabel"] || [n.name isEqualToString:@"adView"] || [n.name isEqualToString:@"rankBtn"])
             continue;
         n.position = CGPointMake(n.position.x - dx, n.position.y - dy);
     }
     player.position = originalPoint;
-}
-
-- (void)didSimulatePhysics {
-    
-}
-
-- (void)showScore {
-    
 }
 
 - (void)initImage {
@@ -402,12 +378,6 @@ int star_specail_type = 1;
     
     for (NSMutableArray * footbardsLine in floorsByLines) {
         for (MoveableFloor * footboard in footbardsLine) {
-            CGRect p = player.calculateAccumulatedFrame;
-            CGRect f = footboard.calculateAccumulatedFrame;
-            //                if(CGRectIntersectsRect(player.calculateAccumulatedFrame, footboard.calculateAccumulatedFrame)){
-            //                    isStandOnFootboard = true;
-            //                    standedFootboard = footboard;
-            //                }
             float SMOOTH_DEVIATION = 1;
             float footboardWidth = footboard.frame.size.width;
             bool b1 = footboard.position.x < player.position.x + player.size.width - SMOOTH_DEVIATION * 4;
@@ -427,10 +397,7 @@ int star_specail_type = 1;
         }
     }
     
-    //    [self moveFootboard];
-    
     if (isStandOnFootboard) {
-        //            [self checkPlayerMoved];
         player.position = CGPointMake(player.position.x, standedFootboard.position.y);
         [self checkLayerNum:standedFootboard];
     } else {
@@ -439,8 +406,6 @@ int star_specail_type = 1;
 }
 
 - (void)checkLayerNum:(SKSpriteNode*) standedFootboard {
-    //    layerNum = standedFootboard.name.intValue - 4;
-    //    layerNumLabel.text = [NSString stringWithFormat:@"%d", layerNum];
     layerNumLabel.text = standedFootboard.name;
     NSLog(@"%@",standedFootboard.name);
 }
@@ -452,9 +417,6 @@ int star_specail_type = 1;
         
         for (NSMutableArray * footbardsLine in floorsByLines) {
             for (MoveableFloor * footboard in footbardsLine) {
-                CGRect p = enemy.calculateAccumulatedFrame;
-                CGRect f = footboard.calculateAccumulatedFrame;
-                
                 float SMOOTH_DEVIATION = 1;
                 float footboardWidth = footboard.frame.size.width;
                 bool b1 = footboard.position.x < enemy.position.x + enemy.size.width - SMOOTH_DEVIATION * 20;
@@ -462,11 +424,6 @@ int star_specail_type = 1;
                 bool b3 = footboard.position.y <= enemy.position.y + 1;
                 bool b4 = footboard.position.y > enemy.position.y - DOWNSPEED;
                 if (b1 && b2 && (b3 && b4)) {
-                    //                       if(isJumping){
-                    //                           isJumping = false;
-                    //                           player.texture = [SKTexture textureWithImageNamed:@"sheep1"];
-                    //                           [player runAction:moveAnimation];
-                    //                       }
                     isStandOnFootboard = true;
                     standedFootboard = footboard;
                     break;
@@ -474,10 +431,7 @@ int star_specail_type = 1;
             }
         }
         
-        //    [self moveFootboard];
-        
         if(isStandOnFootboard){
-            //            [self checkPlayerMoved];
             enemy.position = CGPointMake(enemy.position.x, standedFootboard.position.y);
         }else{
             enemy.position = CGPointMake(enemy.position.x, enemy.position.y-DOWNSPEED);
@@ -524,30 +478,12 @@ int star_specail_type = 1;
                     for (MoveableFloor * floor in footbardsLine) {
                         [floor setIsCarStartFromLeft:isFromLeft];
                     }
-//                    MoveableFloor* floor;
-//                    if(isFromLeft){
-//                        floor = [oneLine lastObject];
-//                        [floor setIsCarStartFromLeft:isFromLeft];
-//                    }else{
-//                        floor = [oneLine firstObject];
-//                        [floor setIsCarStartFromLeft:isFromLeft];
-//                    }
                 }
                 
                 for (Enemy *enemy in enemyArray) {
                     enemy.xScale = player.xScale = (isFromLeft ? 1 : -1);
                 }
             }
-        }
-    }
-}
-
-- (void)checkDodgeEnemy {
-    for (int i = 0; i < enemyArray.count; i++) {
-        SKSpriteNode * enemy = enemyArray[i];
-        
-        if(CGRectIntersectsRect(player.calculateAccumulatedFrame, enemy.calculateAccumulatedFrame)){
-            //            gameover;
         }
     }
 }
@@ -580,17 +516,8 @@ int star_specail_type = 1;
     //create col instance
     for(int i = 0; i < floorsByLines.count; i++){
         [self createFloorAfterCheck:floorsByLines[i] positionY:((MoveableFloor*)[floorsByLines[i] firstObject]).position.y];
-        
-        //        [self addChild:footboard];
-        //        [tmpfootbardsLine addObject:footboard];
-        //        [tmpfootbardsLineIndex addObject:[NSNumber numberWithInt:k]];
     }
-    
-    
-    //    if(floorIntheLastLine.position.y < 50){
-    //        return;
-    //    }
-    
+
     //create row instance
     while (floorIntheLastLine.position.y >= -70) {
         if (footbardsLine.count == 0) {
@@ -633,24 +560,6 @@ int star_specail_type = 1;
         
         footbardsLine = [NSMutableArray array];
     }
-    
-    
-    
-    
-    //    NSMutableArray * tmpfootbardsLine;
-    //    tmpfootbardsLine = [NSMutableArray array];
-    //    NSMutableArray * tmpfootbardsLineIndex;
-    //    tmpfootbardsLineIndex = [NSMutableArray array];
-    
-    
-    
-    //    for(int i = 0; i < tmpfootbardsLine.count; i++){
-    //        NSInteger index = ((NSInteger)[tmpfootbardsLineIndex indexOfObject:[NSNumber numberWithInt:i]]);
-    //        [footbardsLine addObject:tmpfootbardsLine[index]];
-    //    }
-    
-    
-    
 }
 
 
@@ -704,8 +613,6 @@ int star_specail_type = 1;
             [self breakFloor];
             isBreakFloor = false;
         }
-        //        [self checkPlayerMoved];
-        //        [self clearFootboard];
     }
     
     if(self.lastSpawnCreateFootboardTimeInterval > 1.0){
@@ -713,7 +620,6 @@ int star_specail_type = 1;
         
         [self createStar];
         [self createEnemy];
-        //        [self createFootboard];
     }
 }
 

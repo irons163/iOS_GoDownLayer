@@ -23,9 +23,7 @@ static NSArray *_leftNsArray;
 
 + (NSArray *)rightNsArray {
     if (!_rightNsArray) {
-        Enemy.rightNsArray = [TextureHelper getTexturesWithSpriteSheetNamed:@"hamster" withinNode:nil sourceRect:CGRectMake(0, 0, 192, 200) andRowNumberOfSprites:2 andColNumberOfSprites:7
-                        //            sequence:[NSArray arrayWithObjects:@"10",@"11",@"12",@"11",@"10", nil]];
-                                                             sequence:@[@4,@5,@4]];
+        Enemy.rightNsArray = [TextureHelper getTexturesWithSpriteSheetNamed:@"hamster" withinNode:nil sourceRect:CGRectMake(0, 0, 192, 200) andRowNumberOfSprites:2 andColNumberOfSprites:7 sequence:@[@4,@5,@4]];
     }
     return _rightNsArray;
 }
@@ -36,9 +34,7 @@ static NSArray *_leftNsArray;
 
 + (NSArray *)leftNsArray {
     if (!_leftNsArray) {
-        Enemy.leftNsArray = [TextureHelper getTexturesWithSpriteSheetNamed:@"hamster" withinNode:nil sourceRect:CGRectMake(0, 0, 192, 200) andRowNumberOfSprites:2 andColNumberOfSprites:7
-                             //            sequence:[NSArray arrayWithObjects:@"10",@"11",@"12",@"11",@"10", nil]];
-                                                                  sequence:@[@4,@5,@4]];
+        Enemy.leftNsArray = [TextureHelper getTexturesWithSpriteSheetNamed:@"hamster" withinNode:nil sourceRect:CGRectMake(0, 0, 192, 200) andRowNumberOfSprites:2 andColNumberOfSprites:7 sequence:@[@4,@5,@4]];
     }
     return _leftNsArray;
 }
@@ -49,7 +45,6 @@ static NSArray *_leftNsArray;
 
 - (void)setupWithY:(CGFloat)positionY {
     self.size = CGSizeMake(50, 50);
-    //    enemy.position = CGPointMake(0, 70);
     self.anchorPoint = CGPointMake(0.5, 0);
     
     int enemyType = arc4random_uniform(2);
@@ -58,7 +53,6 @@ static NSArray *_leftNsArray;
     if (direction == 0) {
         self.xScale = -1;
         self.position = CGPointMake(10, positionY);
-//        moveAction = [SKAction moveToX:[UIScreen mainScreen].bounds.size.width + 10 duration:2];
         moveAction = [SKAction moveByX:[UIScreen mainScreen].bounds.size.width y:0 duration:2];
         
         if (enemyType == 0) {
@@ -74,7 +68,6 @@ static NSArray *_leftNsArray;
     } else {
         self.xScale = 1;
         self.position = CGPointMake([UIScreen mainScreen].bounds.size.width -10, positionY);
-//        moveAction = [SKAction moveToX:-10 duration:2];
         moveAction = [SKAction moveByX:-[UIScreen mainScreen].bounds.size.width y:0 duration:2];
         
         if (enemyType == 0) {
@@ -88,7 +81,6 @@ static NSArray *_leftNsArray;
             animationAction = [SKAction animateWithTextures:Enemy.rightNsArray timePerFrame:0.2f];//
         }
     }
-    //    SKAction * moveAction = [SKAction moveToX:self.frame.size.width duration:5];
     [self runAction:[SKAction repeatActionForever:[SKAction group:@[moveAction, animationAction]]]];
 }
 

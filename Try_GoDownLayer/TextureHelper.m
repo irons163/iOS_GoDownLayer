@@ -17,11 +17,7 @@ static SKTexture * time01, *time02, *time03, *time04, *time05, *time06, *time07,
 static NSArray * timeScores, * timeScoresImages;
 
 @implementation TextureHelper
-
-//@synthesize hand2Textures;
-
 SKTexture *temp;
-//KVC key-value coding
 
 - (void)setHand2Textures:(NSArray *)hand2Textures {
     
@@ -81,20 +77,9 @@ SKTexture *temp;
 
 + (id)getTexturesWithSpriteSheetNamed:(NSString *)spriteSheet withinNode:(SKSpriteNode *)scene sourceRect:(CGRect)source andRowNumberOfSprites:(int)rowNumberOfSprites andColNumberOfSprites:(int)colNumberOfSprites {
     
-    // @param numberOfSprites - the number of sprite images to the left
-    // @param scene - I add my sprite to a map node. Change it to a SKScene
-    // if [self addChild:] is used.
-    
     NSMutableArray *mAnimatingFrames = [NSMutableArray array];
-    
+
     SKTexture *ssTexture = [SKTexture textureWithImageNamed:spriteSheet];
-    
-    //    NSString *path = [[NSBundle mainBundle] pathForResource:@"hand1"
-    //                                                     ofType:@"png"];
-    //    UIImage *myImage = [UIImage imageWithContentsOfFile:path];
-    
-    //    SKTexture  *ssTexture = [SKTexture textureWithImage:myImage];
-    
     // Makes the sprite (ssTexture) stay pixelated:
     ssTexture.filteringMode = SKTextureFilteringNearest;
     
@@ -121,31 +106,16 @@ SKTexture *temp;
         }
     }
     
-    //    self = [Monster spriteNodeWithTexture:mAnimatingFrames[0]];
-    
-    //    animatingFrames = mAnimatingFrames;
-    
-    //    [scene addChild:self];
-    
     return mAnimatingFrames;
 }
 
 + (id)getTexturesWithSpriteSheetNamed:(NSString *)spriteSheet withinNode:(SKSpriteNode *)scene sourceRect:(CGRect)source andRowNumberOfSprites:(int)rowNumberOfSprites andColNumberOfSprites:(int)colNumberOfSprites sequence:(NSArray *)positions {
     
-    // @param numberOfSprites - the number of sprite images to the left
-    // @param scene - I add my sprite to a map node. Change it to a SKScene
-    // if [self addChild:] is used.
-    
     NSMutableArray *mAnimatingFrames = [NSMutableArray array];
-    
-    //    SKTexture  *ssTexture = [SKTexture textureWithImageNamed:spriteSheet];
-    
     NSString *path = [[NSBundle mainBundle] pathForResource:spriteSheet
                                                      ofType:@"png"];
     UIImage *myImage = [UIImage imageWithContentsOfFile:path];
-    
     SKTexture  *ssTexture = [SKTexture textureWithImage:myImage];
-    
     // Makes the sprite (ssTexture) stay pixelated:
     ssTexture.filteringMode = SKTextureFilteringNearest;
     
@@ -163,20 +133,12 @@ SKTexture *temp;
         SKTexture *temp = [SKTexture textureWithRect:cutter inTexture:ssTexture];
         [mAnimatingFrames addObject:temp];
         
-        //        if(i < colNumberOfSprites){
         sx += sWidth / ssTexture.size.width;
-        //        }else{
         if ((i + 1) % colNumberOfSprites == 0) {
             sx = source.origin.x;
             sy += sHeight / ssTexture.size.height;
         }
     }
-    
-    //    self = [Monster spriteNodeWithTexture:mAnimatingFrames[0]];
-    
-    //    animatingFrames = mAnimatingFrames;
-    
-    //    [scene addChild:self];
     
     NSMutableArray *array = [NSMutableArray array];
     

@@ -26,8 +26,8 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "595"
-            endingLineNumber = "595"
+            startingLineNumber = "522"
+            endingLineNumber = "522"
             landmarkName = "-createFoorsInLines"
             landmarkType = "7">
          </BreakpointContent>
@@ -60,8 +60,8 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "501"
-            endingLineNumber = "501"
+            startingLineNumber = "455"
+            endingLineNumber = "455"
             landmarkName = "-checkPlayerHitEnemy"
             landmarkType = "7">
          </BreakpointContent>
@@ -77,8 +77,8 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "601"
-            endingLineNumber = "601"
+            startingLineNumber = "528"
+            endingLineNumber = "528"
             landmarkName = "-createFoorsInLines"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "621"
-            endingLineNumber = "621"
+            startingLineNumber = "548"
+            endingLineNumber = "548"
             landmarkName = "-createFoorsInLines"
             landmarkType = "7">
          </BreakpointContent>
@@ -111,8 +111,8 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-createStar"
             landmarkType = "7">
          </BreakpointContent>
@@ -128,8 +128,8 @@
             timestampString = "473768786.566228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "-createStar"
             landmarkType = "7">
          </BreakpointContent>
@@ -160,8 +160,8 @@
             filePath = "Try_GoDownLayer/MyScene.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "521"
-            endingLineNumber = "521"
+            startingLineNumber = "475"
+            endingLineNumber = "475"
             landmarkName = "-checkPlayerHitEnemy"
             landmarkType = "7">
          </BreakpointContent>
